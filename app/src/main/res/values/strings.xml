@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">OnlineDailyGroceriesStore</string>
+    <string name="daily_groceries">Daily Groceries</string>
+    <string name="todo">TODO</string>
 </resources>
