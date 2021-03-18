@@ -9,6 +9,10 @@
 # Java class files
 *.class
 
+# Project resources
+daily-groceries-store.zip
+daily-groceries-store
+
 # Generated files
 bin/
 gen/
