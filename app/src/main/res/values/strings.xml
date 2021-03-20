@@ -2,4 +2,6 @@
     <string name="app_name">OnlineDailyGroceriesStore</string>
     <string name="daily_groceries">Daily Groceries</string>
     <string name="todo">TODO</string>
+    <string name="shop_groceries">Shop groceries items through daily grocery app online super market store at best prices.</string>
+    <string name="search">Search</string>
 </resources>
