@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.example.onlinedailygroceriesstore.adapter.CategoryAdapter;
 import com.example.onlinedailygroceriesstore.adapter.DiscountedProductAdapter;
@@ -23,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     CategoryAdapter categoryAdapter;
     List<Category> categoryList;
 
+    TextView allCategory;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +34,12 @@ public class MainActivity extends AppCompatActivity {
 
         discountRecyclerView = findViewById(R.id.discountedRecycler);
         categoryRecyclerView = findViewById(R.id.categoryRecycler);
+        allCategory = findViewById(R.id.allCategoryImage);
+
+        allCategory.setOnClickListener(view -> {
+            Intent i = new Intent(MainActivity.this, AllCategory.class);
+            startActivity(i);
+        });
 
         // adding data to model
         discountedProductsList = new ArrayList<>();

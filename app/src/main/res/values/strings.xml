@@ -6,4 +6,6 @@
     <string name="search">Search</string>
     <string name="top_discounted_items">Top Discounted Items</string>
     <string name="select_categories">Select Categories</string>
+    <string name="see_more">See More</string>
+    <string name="select_a_category">Select a category</string>
 </resources>
