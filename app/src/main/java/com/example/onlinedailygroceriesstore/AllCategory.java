@@ -5,11 +5,13 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.example.onlinedailygroceriesstore.adapter.AllCategoryAdapter;
 import com.example.onlinedailygroceriesstore.model.AllCategoryModel;
@@ -23,12 +25,24 @@ public class AllCategory extends AppCompatActivity {
     AllCategoryAdapter allCategoryAdapter;
     List<AllCategoryModel> allCategoryModelList;
 
+    ImageView back;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_category);
 
         AllCategoryRecycler = findViewById(R.id.all_category);
+        back = findViewById(R.id.back);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent back = new Intent(AllCategory.this, MainActivity.class);
+                startActivity(back);
+                finish();
+            }
+        });
 
         // adding data to model
         allCategoryModelList = new ArrayList<>();
