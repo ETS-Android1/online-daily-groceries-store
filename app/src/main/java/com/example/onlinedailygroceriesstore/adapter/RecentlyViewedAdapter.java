@@ -1,6 +1,7 @@
 package com.example.onlinedailygroceriesstore.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.onlinedailygroceriesstore.ProductDetails;
 import com.example.onlinedailygroceriesstore.R;
 import com.example.onlinedailygroceriesstore.model.RecentlyViewed;
 
@@ -42,6 +44,16 @@ public class RecentlyViewedAdapter extends RecyclerView.Adapter<RecentlyViewedAd
         holder.qty.setText(recentlyViewedList.get(position).getQuantity());
         holder.unit.setText(recentlyViewedList.get(position).getUnit());
         holder.bg.setBackgroundResource(recentlyViewedList.get(position).getImageUrl());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent i=new Intent(context, ProductDetails.class);
+                context.startActivity(i);
+
+            }
+        });
 
     }
 
