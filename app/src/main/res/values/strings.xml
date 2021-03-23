@@ -15,4 +15,5 @@
     <string name="product_details">Product Details</string>
     <string name="proddesc">prodDesc</string>
     <string name="buy_now">Buy Now</string>
+    <string name="recently_viewed_items">Recently Viewed Items</string>
 </resources>
